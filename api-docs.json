@@ -1,0 +1,359 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OpenAPI definition",
+    "version": "v0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/foo": {
+      "get": {
+        "tags": [
+          "collision-controller"
+        ],
+        "operationId": "getFoo",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Foos"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "collision-controller"
+        ],
+        "operationId": "getFoo_3",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Foos"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "collision-controller"
+        ],
+        "operationId": "getFoo_2",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Foos"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "collision-controller"
+        ],
+        "operationId": "getFoo_5",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Foos"
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "tags": [
+          "collision-controller"
+        ],
+        "operationId": "getFoo_6",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Foos"
+                }
+              }
+            }
+          }
+        }
+      },
+      "head": {
+        "tags": [
+          "collision-controller"
+        ],
+        "operationId": "getFoo_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Foos"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "collision-controller"
+        ],
+        "operationId": "getFoo_4",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Foos"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bar": {
+      "get": {
+        "tags": [
+          "collision-controller"
+        ],
+        "operationId": "getBar",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bars"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "collision-controller"
+        ],
+        "operationId": "getBar_3",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bars"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "collision-controller"
+        ],
+        "operationId": "getBar_2",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bars"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "collision-controller"
+        ],
+        "operationId": "getBar_5",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bars"
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "tags": [
+          "collision-controller"
+        ],
+        "operationId": "getBar_6",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bars"
+                }
+              }
+            }
+          }
+        }
+      },
+      "head": {
+        "tags": [
+          "collision-controller"
+        ],
+        "operationId": "getBar_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bars"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "collision-controller"
+        ],
+        "operationId": "getBar_4",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bars"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CollidingBase": {
+        "required": [
+          "fooBase"
+        ],
+        "type": "object",
+        "properties": {
+          "fooBase": {
+            "type": "string"
+          }
+        }
+      },
+      "Foo": {
+        "required": [
+          "foo",
+          "fooBase"
+        ],
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/CollidingBase"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foo": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "Foos": {
+        "required": [
+          "foos"
+        ],
+        "type": "object",
+        "properties": {
+          "foos": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Foo"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "Bar": {
+        "required": [
+          "bar",
+          "barBase"
+        ],
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/CollidingBase"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "bar": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "Bars": {
+        "required": [
+          "bar"
+        ],
+        "type": "object",
+        "properties": {
+          "bar": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Bar"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
